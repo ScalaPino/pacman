@@ -1,7 +1,8 @@
 package epfl.pacman
 package maze
 
-import epfl.pacman.interface._
+import interfac._
+
 import compiler.BehaviorCompiler
 
 /*
@@ -53,6 +54,7 @@ abstract class BehaviorCompiler {
 class MVC extends Models with Views with GUIs with Sounds with Controllers {
   val lang = "en"
   val locale = new java.util.Locale(lang)
+
   val messages = java.util.ResourceBundle.getBundle("UI", locale)
   def text(key: String) = messages.getString(key)
 
@@ -61,7 +63,7 @@ class MVC extends Models with Views with GUIs with Sounds with Controllers {
   val gui = new PacmanScreen()
   val controller = new Controller()
 
-  val compiler = new BehaviorCompiler {
-    val mvc: MVC.this.type = MVC.this
-  }
+//  val compiler = new BehaviorCompiler {
+//    val mvc: MVC.this.type = MVC.this
+//  }
 }

@@ -32,13 +32,13 @@ abstract class Behavior {
     }
 
     def siChasseur = si(model.pacman.hunter) _
-    def siChass√©   = si(!model.pacman.hunter) _
-    def siChasse   = siChass√©
+    def siChassÈ   = si(!model.pacman.hunter) _
+    def siChasse   = siChassÈ
 
-    def siMonstrePr√®s = si(model.minDistBetween(model.pacman.pos, model.pacman.pos, positions(model.monsters), Set[Position]()) <  Settings.farDistance) _
-    def siMonstresPr√®s = siMonstrePr√®s
-    def siMonstrePres = siMonstrePr√®s
-    def siMonstresPres = siMonstrePr√®s
+    def siMonstrePrËs = si(model.minDistBetween(model.pacman.pos, model.pacman.pos, positions(model.monsters), Set[Position]()) <  Settings.farDistance) _
+    def siMonstresPrËs = siMonstrePrËs
+    def siMonstrePres = siMonstrePrËs
+    def siMonstresPres = siMonstrePrËs
 
     def siMonstresLoin = si(model.minDistBetween(model.pacman.pos, model.pacman.pos, positions(model.monsters), Set[Position]()) >= Settings.farDistance) _
 
@@ -66,13 +66,13 @@ abstract class Behavior {
 
     // FILTERS
 
-    def √†Droite(ds: Directions): Directions =
+    def ‡Droite(ds: Directions): Directions =
       Directions(ds.dirs & Set(Right))
-    def aDroite(ds: Directions): Directions = √†Droite(ds)
+    def aDroite(ds: Directions): Directions = ‡Droite(ds)
 
-    def √†Gauche(ds: Directions): Directions =
+    def ‡Gauche(ds: Directions): Directions =
       Directions(ds.dirs & Set(Left))
-    def aGauche(ds: Directions): Directions = √†Gauche(ds)
+    def aGauche(ds: Directions): Directions = ‡Gauche(ds)
 
     def enHaut(ds: Directions): Directions =
       Directions(ds.dirs & Set(Up))
@@ -145,7 +145,7 @@ abstract class Behavior {
       randomBestDir(withDists.sortWith((a, b) => a._2 < b._2))
     }
 
-    def enS√©curit√©Pendant(n: Int)(ds: Directions): Directions = {
+    def enSÈcuritÈPendant(n: Int)(ds: Directions): Directions = {
       val dirDists = ds.dirs.map(d => (d, model.maxSafePathBetween(model.pacman.pos, d, Set[Position]() ++ model.monsters.map(_.pos), n+1)))
       val okDists = dirDists.filter(d => d._2 > n).toSeq
 
@@ -156,7 +156,7 @@ abstract class Behavior {
         NoDirections
       }
     }
-    def enSecuritePendant(n: Int)(ds: Directions) = enS√©curit√©Pendant(n)(ds)
+    def enSecuritePendant(n: Int)(ds: Directions) = enSÈcuritÈPendant(n)(ds)
 
 
 

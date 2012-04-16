@@ -1,16 +1,13 @@
 package epfl.pacman
 
-import javax.swing.JApplet
-
-import scala.swing._
-import maze.MVC
 import java.awt.Color
+import javax.swing.JApplet
 
 class MainApplet extends JApplet {
 
   this.setBackground(Color.BLACK)
 
-  val mvc = new MVC
+  val mvc = new maze.MVC
 
   this.add(mvc.gui.peer)
 

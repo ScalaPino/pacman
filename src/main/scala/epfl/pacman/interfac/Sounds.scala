@@ -1,9 +1,9 @@
 package epfl.pacman
-package interface
+package interfac
 
 import java.io.File
-import maze.MVC
 import javax.sound.sampled._
+import maze.MVC
 
 trait Sounds { this: MVC =>
     class SoundPlayer(filename: String) extends Thread {

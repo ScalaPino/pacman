@@ -1,12 +1,12 @@
 package epfl.pacman
 
-import scala.swing._
-import maze.MVC
 import java.awt.Color
+import scala.swing.MainFrame
+import scala.swing.SimpleSwingApplication
 
 object Main extends SimpleSwingApplication {
 
-  val mvc = new MVC
+  val mvc = new maze.MVC
 
   def top = new MainFrame {
       title = mvc.text("titleText")

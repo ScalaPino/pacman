@@ -1,4 +1,3 @@
-
 package epfl.pacman
 package maze
 
@@ -6,6 +5,7 @@ import actors.Actor
 import java.awt.Rectangle
 import scala.util.Random.nextInt
 import behaviour.{DefaultMonsterBehavior, DefaultPacManBehavior, Behavior}
+import interfac._
 
 trait Controllers { mvc: MVC =>
 
@@ -284,14 +284,14 @@ trait Controllers { mvc: MVC =>
               gui.update()
             }
 
-          case Compile(code) =>
-            val next = model.state match {
-              case CompileError(n) => n
-              case s => s
-            }
-            model = model.copy(state = Loading(next))
-            gui.update()
-            compiler.compile(code)
+//          case Compile(code) =>
+//            val next = model.state match {
+//              case CompileError(n) => n
+//              case s => s
+//            }
+//            model = model.copy(state = Loading(next))
+//            gui.update()
+//            compiler.compile(code)
 
 
           case FoundErrors(lines) =>

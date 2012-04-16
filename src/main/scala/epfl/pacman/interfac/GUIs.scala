@@ -1,5 +1,5 @@
 package epfl.pacman
-package interface
+package interfac
 
 import swing._
 import Swing._

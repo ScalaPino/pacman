@@ -1,12 +1,13 @@
 package epfl.pacman
 package compiler
 
-import tools.nsc.{Global, Settings}
-import tools.nsc.io.VirtualDirectory
-import tools.nsc.interpreter.AbstractFileClassLoader
-import tools.nsc.reporters.AbstractReporter
+
+import scala.tools.nsc.{Global, Settings}
+import  scala.tools.nsc.io.VirtualDirectory
+import  scala.tools.nsc.interpreter.AbstractFileClassLoader
+import  scala.tools.nsc.reporters.AbstractReporter
 import java.lang.String
-import tools.nsc.util.{Position => FilePosition, BatchSourceFile}
+import  scala.tools.nsc.util.{Position => FilePosition, BatchSourceFile}
 import collection.mutable.{Set, HashSet}
 import maze.MVC
 import behaviour.Behavior
