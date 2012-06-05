@@ -52,7 +52,7 @@ abstract class BehaviorCompiler {
 */
 
 class MVC extends Models with Views with GUIs with Sounds with Controllers {
-  val lang = "en"
+  val lang = "fr"
   val locale = new java.util.Locale(lang)
 
   val messages = java.util.ResourceBundle.getBundle("UI", locale)
